@@ -7,7 +7,6 @@ A low-level design and working implementation of an affiliate-sales payout syste
 Stack: **Python 3.11+, FastAPI, SQLite** (stdlib `sqlite3`, no ORM — so every
 query is visible and portable to Postgres/MySQL with no rewrite).
 
----
 
 ## 1. Domain model & ER diagram
 
