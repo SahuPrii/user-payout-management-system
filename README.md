@@ -216,8 +216,6 @@ asserts every intermediate number matches the PDF.
    user-session or admin-role checks (e.g. only admins can call `/reconcile`
    and `/payouts/advance/run`).
 
----
-
 ## 8. Running it
 
 ```bash
