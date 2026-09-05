@@ -68,18 +68,14 @@ def run_advance_payout_job():
 def create_withdrawal(body: CreateWithdrawalRequest):
     return service.create_withdrawal(body.user_id, body.amount)
 
-
 @app.post("/withdrawals/{withdrawal_id}/status", tags=["withdrawals"])
 def update_withdrawal_status(withdrawal_id: str, body: UpdateWithdrawalStatusRequest):
     """Simulates a payment-gateway webhook updating a withdrawal's outcome."""
     return service.update_withdrawal_status(withdrawal_id, body.status)
 
-
 @app.get("/withdrawals/user/{user_id}", tags=["withdrawals"])
 def list_withdrawals(user_id: str):
     return service.list_withdrawals(user_id)
-
-
 @app.get("/", tags=["meta"])
 def root():
     return {"status": "ok", "docs": "/docs"}
